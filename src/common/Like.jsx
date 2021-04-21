@@ -1,16 +1,15 @@
-import React, { Component } from "react";
-const Like = () => {
+const Like = (props) => {
   let classes = "fa fa-heart";
-  if (!this.props.liked) classes += "-o";
+  if (!props.liked) classes += "-o";
   return (
-    <React.Fragment>
+    <div>
       <i
-        onClick={this.props.onClick}
+        onClick={props.onClick}
         style={{ cursor: "pointer" }}
         className={classes}
         aria-hidden="true"
       ></i>
-    </React.Fragment>
+    </div>
   );
 };
 
