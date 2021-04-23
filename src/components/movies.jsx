@@ -6,6 +6,8 @@ import { getGenres } from "../services/fakeGenreService.js";
 import { paginate } from "../utils/paginate";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
+import MovieForm from "./movieForm";
+import { Link } from "react-router-dom";
 class Movies extends Component {
   state = {
     movies: [],
@@ -84,6 +86,13 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
+          <Link
+            style={{ marginBottom: 20 }}
+            to="/movies/new"
+            className="btn btn-primary"
+          >
+            New Movie
+          </Link>
           <p>Showing {totalCount} movies from the list</p>
 
           <MoviesTable

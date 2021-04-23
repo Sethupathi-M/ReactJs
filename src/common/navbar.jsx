@@ -22,6 +22,9 @@ const NavBar = () => {
             <NavLink className="nav-link" aria-current="page" to="/login">
               Login
             </NavLink>
+            <NavLink className="nav-link" aria-current="page" to="/register">
+              Register
+            </NavLink>
           </ul>
         </div>
       </div>
