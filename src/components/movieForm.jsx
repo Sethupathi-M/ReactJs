@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Form from "./../common/form";
 import { getGenres } from "./../services/fakeGenreService";
 import { getMovie, saveMovie } from "./../services/fakeMovieService";
@@ -38,7 +38,7 @@ class MovieForm extends Form {
     this.setState({ genres });
 
     const movieId = this.props.match.params.id;
-    if (movieId == "new") return;
+    if (movieId === "new") return;
 
     const movie = getMovie(movieId);
     if (!movie) return this.props.history.replace("/not-found");
